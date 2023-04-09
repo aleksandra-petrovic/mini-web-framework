@@ -1,0 +1,10 @@
+<aspectj>
+    <aspects>
+        <aspect name="project.aspect.MyAspect" />
+    </aspects>
+    <weaver options="-verbose -showWeaveInfo -Xset:weaveJavaxPackages=true">
+        <include within="project.aspect.*"/>
+        <include within="project.project.reflection.server.*"/>
+        <include within="project.project.reflection.*"/>
+    </weaver>
+</aspectj>
